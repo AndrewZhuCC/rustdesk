@@ -1448,8 +1448,6 @@ impl Connection {
     }
 
     pub fn permission(enable_prefix_option: &str) -> bool {
-        #[cfg(feature = "flutter")]
-        #[cfg(not(any(target_os = "android", target_os = "ios")))]
         return false;
     }
 
