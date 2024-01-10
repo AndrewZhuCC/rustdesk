@@ -411,8 +411,8 @@ mod test {
 
     #[test]
     fn test_ipv4() {
-        assert!(is_ipv4_str("1.2.3.4"));
-        assert!(is_ipv4_str("1.2.3.4:90"));
+        assert!(is_ipv4_str("1.2.6.4"));
+        assert!(is_ipv4_str("1.2.6.4:90"));
         assert!(is_ipv4_str("192.168.0.1"));
         assert!(is_ipv4_str("0.0.0.0"));
         assert!(is_ipv4_str("255.255.255.255"));
@@ -435,8 +435,8 @@ mod test {
         assert!(!is_domain_port_str("under_score:12"));
         assert!(!is_domain_port_str("a@bc:12"));
         assert!(!is_domain_port_str("1.1.1.1:12"));
-        assert!(!is_domain_port_str("1.2.3:12"));
-        assert!(!is_domain_port_str("1.2.3.45:12"));
+        assert!(!is_domain_port_str("1.2.6:12"));
+        assert!(!is_domain_port_str("1.2.6.45:12"));
         assert!(!is_domain_port_str("a.b.c:123456"));
         assert!(!is_domain_port_str("---:12"));
         assert!(!is_domain_port_str(".:12"));
